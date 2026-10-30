@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Kis Cake & Bakery - Kelezatan Modern dalam Setiap Gigitan</title>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc8fc',
+                            400: '#36affa',
+                            500: '#0c93eb',
+                            600: '#0075ce',
+                            700: '#015da7',
+                            800: '#064f8a',
+                            900: '#0b4272',
+                            950: '#072a4a',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b1120',
+                            950: '#050811',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(54, 175, 250, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar Section -->
+    <header class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid font-bold text-xl fa-cake-candles"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl tracking-tight text-white group-hover:text-brand-300 transition-colors">
+                            Purple Kis
+                        </span>
+                        <span class="text-[10px] tracking-widest text-brand-400 uppercase font-semibold -mt-1">
+                            Cake & Bakery
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#beranda" class="text-sm font-medium text-brand-300 transition-colors hover:text-white">Beranda</a>
+                    <a href="#menu" class="text-sm font-medium text-slate-300 hover:text-brand-300 transition-colors">Menu Utama</a>
+                    <a href="#tentang" class="text-sm font-medium text-slate-300 hover:text-brand-300 transition-colors">Tentang Kami</a>
+                    <a href="#kontak" class="text-sm font-medium text-slate-300 hover:text-brand-300 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Login Button & Mobile Menu Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#login" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 rounded-xl shadow-lg shadow-brand-600/30 hover:shadow-brand-500/50 transition-all duration-300 hover:-translate-y-0.5 border border-brand-400/30">
+                        <i class="fa-solid fa-right-to-bracket mr-2 text-xs"></i>
+                        Masuk
+                    </a>
+
+                    <!-- Hamburger Button (Mobile) -->
+                    <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle Menu">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block py-2 text-base font-medium text-brand-300 hover:bg-slate-800/50 rounded-lg px-3">Beranda</a>
+            <a href="#menu" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-300 hover:bg-slate-800/50 rounded-lg px-3">Menu Utama</a>
+            <a href="#tentang" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-300 hover:bg-slate-800/50 rounded-lg px-3">Tentang Kami</a>
+            <a href="#kontak" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-300 hover:bg-slate-800/50 rounded-lg px-3">Kontak</a>
+            <div class="pt-2 border-t border-slate-800 sm:hidden">
+                <a href="#login" class="flex items-center justify-center w-full py-2.5 text-sm font-medium text-white bg-brand-600 hover:bg-brand-500 rounded-xl">
+                    <i class="fa-solid fa-right-to-bracket mr-2 text-xs"></i>
+                    Masuk
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-navy-900 via-slate-900 to-slate-900">
+            
+            <!-- Ambient Background Glows -->
+            <div class="absolute top-1/4 left-10 w-72 h-72 bg-brand-600/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Text Content -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs sm:text-sm font-medium mb-6">
+                            <span class="flex h-2 w-2 rounded-full bg-brand-400 animate-pulse"></span>
+                            Kelezatan Premium & Bahan Pilihan
+                        </div>
+
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-6">
+                            Seni Kue Modern dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-blue-200">Rasa Istimewa</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                            Nikmati kelembutan kue dan keharuman roti segar olahan resep artisanal dari <strong class="text-white font-medium">Purple Kis Cake & Bakery</strong>. Dibuat khusus untuk menyempurnakan setiap momen berharga Anda.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#menu" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 rounded-xl shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 transition-all duration-300 hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-shopping text-sm"></i>
+                                Pesan Sekarang
+                            </a>
+                            <a href="#tentang" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-200 bg-slate-800/80 hover:bg-slate-800 hover:text-white rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-store text-sm text-brand-400"></i>
+                                Lihat Menu
+                            </a>
+                        </div>
+
+                        <!-- Mini Highlights / Stats -->
+                        <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-300">100%</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Bahan Alami</p>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-300">50+</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Varian Kue</p>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-300">4.9★</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1">Rating Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Image -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Glowing Frame Effect -->
+                            <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-600 to-cyan-400 rounded-3xl blur-lg opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+                            
+                            <div class="relative rounded-3xl overflow-hidden bg-slate-800 border border-slate-700/60 shadow-2xl">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" 
+                                    alt="Modern Blueberry Velvet Cake" 
+                                    class="w-full h-[380px] sm:h-[460px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                    onerror="this.src='https://placehold.co/800x800/0b4272/ffffff?text=Purple+Kis+Bakery'"
+                                >
+                                <!-- Floating Badge Overlay -->
+                                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-navy-900/90 backdrop-blur-md border border-slate-700/80 flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-crown text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-brand-300 font-medium">Favorit Minggu Ini</p>
+                                        <h4 class="text-sm font-semibold text-white">Blueberry Velvet Special</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy-950 border-t border-slate-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+                
+                <!-- Footer Brand -->
+                <div class="flex items-center gap-3 text-center md:text-left">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-lg">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-lg text-white block">Purple Kis</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-widest block -mt-1">Cake & Bakery</span>
+                    </div>
+                </div>
+
+                <!-- Footer Quick Nav -->
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+                    <a href="#beranda" class="hover:text-brand-300 transition-colors">Beranda</a>
+                    <a href="#menu" class="hover:text-brand-300 transition-colors">Menu Utama</a>
+                    <a href="#tentang" class="hover:text-brand-300 transition-colors">Tentang Kami</a>
+                    <a href="#kontak" class="hover:text-brand-300 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-6 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Purple Kis Cake & Bakery. Seluruh hak cipta dilindungi undang-undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Interaction -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon between bars and times (x)
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>
